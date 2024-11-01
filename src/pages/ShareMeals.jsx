@@ -49,7 +49,6 @@ const ShareMeals = () => {
 
         {/* Sidebar */}
         <div className="ml-3  flex  flex-col gap-5">
-
           {/* Sidebar Links */}
           <div className=" text-[#00712D] gap-3 p-2 rounded-md  flex  items-center ">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -205,8 +204,6 @@ const ShareMeals = () => {
                     ))}
                   </div>
                 </div>
-
-
               </form>
             </div>
 
@@ -215,6 +212,10 @@ const ShareMeals = () => {
           <div className="bg-[#00712D] text-white p-5 rounded-xl">
             <h1 className="mb-5">Informasi Pengambilan Produk</h1>
 
+            <form action="">
+
+
+            </form>
             <div className="w-3/4 mb-4 relative">
               <h1 className="text-xs text-white mb-2">Lokasi Pengambilan</h1>
               <input
@@ -231,40 +232,50 @@ const ShareMeals = () => {
             </div>
 
             {/* Date */}
-            <div className="flex gap-4 w-3/4">
-              {/* Waktu Awal Pengambilan */}
-              <div className="mb-4 relative w-1/2" onClick={handleFocusAwal}>
-                <h1 className="text-xs text-white mb-2">Waktu Awal Pengambilan</h1>
-                <div className="flex items-center border border-white rounded-md p-1 cursor-pointer">
-                  <input
-                    type="date"
-                    ref={awalRef}
-                    className="text-xs bg-transparent text-gray-300 outline-none w-full placeholder-gray-300 text-center"
-                  />
+            <form action="">
+              <div className="flex gap-4 w-3/4">
+
+                {/* Waktu Awal Pengambilan */}
+                <div className="mb-4 relative w-1/2" onClick={handleFocusAwal}>
+                  <h1 className="text-xs text-white mb-2">Waktu Awal Pengambilan</h1>
+                  <div className="flex items-center border border-white rounded-md p-1 cursor-pointer">
+                    <input
+                      type="date"
+                      ref={awalRef}
+                      className="text-xs bg-transparent text-gray-300 outline-none w-full placeholder-gray-300 text-center"
+                    />
+                  </div>
                 </div>
+
+                {/* Waktu Akhir Pengambilan */}
+                <div className="mb-4 relative w-1/2" onClick={handleFocusAkhir}>
+                  <h1 className="text-xs text-white mb-2">Waktu Akhir Pengambilan</h1>
+                  <div className="flex items-center border border-white rounded-md p-1 cursor-pointer">
+                    <input
+                      type="date"
+                      ref={akhirRef}
+                      className="text-xs bg-transparent text-gray-300 outline-none w-full placeholder-gray-300 text-center"
+                    />
+                  </div>
+                </div>
+
+
+
               </div>
 
-              {/* Waktu Akhir Pengambilan */}
-              <div className="mb-4 relative w-1/2" onClick={handleFocusAkhir}>
-                <h1 className="text-xs text-white mb-2">Waktu Akhir Pengambilan</h1>
-                <div className="flex items-center border border-white rounded-md p-1 cursor-pointer">
-                  <input
-                    type="date"
-                    ref={akhirRef}
-                    className="text-xs bg-transparent text-gray-300 outline-none w-full placeholder-gray-300 text-center"
-                  />
-                </div>
-              </div>
-            </div>
+              <button className="transition duration-300 w-3/4 text-xs text-white font-bold py-4 px-4 bg-transparent border rounded-xl hover:bg-white hover:text-[#00712D] hover:scale-104">
+                Upload
+              </button>
+            </form>
 
 
           </div>
         </div>
 
 
-      </section>
+      </section >
 
-    </div>
+    </div >
   )
 }
 
