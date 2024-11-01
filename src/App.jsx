@@ -7,15 +7,15 @@ import CharityCampaign from './pages/CharityCampaign';
 import Settings from './pages/Settings';
 import ShareYourActivity from './pages/ShareYourActivity';
 import BlogArtikel from './pages/BlogArtikel';
-import Home from './pages/Home';
+import LandingPage from './pages/LandingPage';
 import RegisterScreen from './pages/RegisterScreen';
 
 const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/homepage" element={<HomePage />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/grabmeals" element={<GrabMeals />} />
         <Route path="/sharemeals" element={<ShareMeals />} />

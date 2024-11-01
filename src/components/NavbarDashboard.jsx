@@ -1,10 +1,19 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 
 const NavbarDashboard = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        setIsVisible((prevState) => !prevState);
+    };
+
+
     return (
         <nav className="fixed mb-5 top-0 p-3 bg-white shadow-md w-full">
             <div className="flex items-center px-5">
-                {/* Kiri */}
+
                 {/* Logo */}
                 <Link to="/homepage" className="py-1 pr-10 flex gap-2 hover:scale-110 transition duration-300">
                     <span className="text-2xl font-bold text-[#00712D]">
@@ -12,9 +21,9 @@ const NavbarDashboard = () => {
                     </span>
                 </Link>
 
-                {/* Kanan */}
+
                 <div className='flex justify-between  items-center w-full  '>
-                    {/* Search Bar - Center */}
+                    {/* Search Bar*/}
                     <div className="flex-grow mx-5 flex">
                         <div className="flex items-center border border-[#00712D] rounded-full p-1 max-w-sm w-full">
                             <input
@@ -40,7 +49,7 @@ const NavbarDashboard = () => {
                     </div>
 
 
-                    {/* Profil dan Notifikasi - Right */}
+                    {/* Profil dan Notifikasi*/}
                     <div className="flex items-center gap-4">
                         {/* Notification Icon */}
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="gray" className="bi bi-bell" viewBox="0 0 16 16">
@@ -54,19 +63,46 @@ const NavbarDashboard = () => {
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                                 <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                             </svg>
-
+                            {/* Profile Identity */}
                             <div className="text-sm">
                                 <h1 className="font-bold text-[#00712D]">Chilli Pari</h1>
                                 <h2 className="text-gray-500">Malang, Indonesia</h2>
                             </div>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="gray" className="bi bi-chevron-down" viewBox="0 0 16 16">
-                                <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            </svg>
+                            {/* Dropdown */}
+                            <div className='relative'>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    fill="gray"
+                                    className={`bi bi-chevron-down cursor-pointer transition-transform duration-300 ${isVisible ? 'rotate-180' : ''
+                                        }`}
+                                    viewBox="0 0 16 16"
+                                    onClick={toggleVisibility}
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                                    />
+                                </svg>
+                                <div
+                                    className={`transition duration-300 absolute top-3/4 right-1/2 min-w-full w-max bg-white shadow-md mt-1 rounded ${isVisible ? '' : 'hidden'
+                                        }`}
+                                >
+                                    <ul className='text-xs text-right border rounded'>
+                                        <Link to="/">
+                                            <li className='hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Logout</li>
+                                        </Link>
+                                        <li className='hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Edit Profil</li>
+                                        <li className='hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Helps & Support</li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
             </div>
         </nav>
     );

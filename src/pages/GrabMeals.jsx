@@ -6,9 +6,8 @@ const GrabMeals = () => {
     return (
         <div>
             <NavbarDashboard />
-            <section className="mt-24 flex px-5">
+            <section className="mb-5 mt-24 flex px-5">
                 <Sidebar />
-
 
                 {/* Content */}
                 <div className="ml-10 w-full">
@@ -59,7 +58,6 @@ const GrabMeals = () => {
                         />
                     </div>
                 </div>
-
 
             </section>
         </div>

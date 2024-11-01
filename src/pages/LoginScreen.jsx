@@ -17,7 +17,7 @@ function LoginScreen() {
             <section className=" min-h-screen flex items-center justify-center py-10">
                 <div className="p-5 max-w-3xl shadow-lg bg-gray-100 flex rounded-2xl items-center">
                     <div className='md:w-1/2 px-16'>
-                        <Link to="/homepage"> <h2 className='font-bold text-2xl text-[#00712D]'>Login</h2> </Link>
+                        <h2 className='font-bold text-2xl text-[#00712D]'>Login</h2>
 
                         <p className='text-sm mt-4 text-[#00712D]'>If You Already A Member, Easily Log In</p>
 
@@ -43,7 +43,7 @@ function LoginScreen() {
                                     <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
                                 </svg>
                             </div>
-                            <button className='bg-[#00712D] rounded-xl py-2 text-white hover:scale-105 duration-300'>Login</button>
+                            <Link className='bg-[#00712D] rounded-xl py-2 text-white hover:scale-105 duration-300 text-center' to="/homepage"><button>Login</button></Link>
                         </form>
 
                         <div className='mt-10 grid grid-cols-3 items-center text-gray-500'>

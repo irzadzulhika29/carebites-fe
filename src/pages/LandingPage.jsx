@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar"
 
-const Home = () => {
+const LandingPage = () => {
     return (
         <div>
             <Navbar />
@@ -8,4 +8,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default LandingPage
