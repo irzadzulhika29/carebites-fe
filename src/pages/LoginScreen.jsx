@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import LoginImage from '../assets/img/donate.jpg';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 function LoginScreen() {
     const [showPassword, setShowPassword] = useState(false);
@@ -16,7 +17,8 @@ function LoginScreen() {
             <section className=" min-h-screen flex items-center justify-center py-10">
                 <div className="p-5 max-w-3xl shadow-lg bg-gray-100 flex rounded-2xl items-center">
                     <div className='md:w-1/2 px-16'>
-                        <h2 className='font-bold text-2xl text-[#00712D]'>Login</h2>
+                        <Link to="/homepage"> <h2 className='font-bold text-2xl text-[#00712D]'>Login</h2> </Link>
+
                         <p className='text-sm mt-4 text-[#00712D]'>If You Already A Member, Easily Log In</p>
 
                         <form className='flex flex-col gap-4' action="">
@@ -64,7 +66,8 @@ function LoginScreen() {
 
                         <div className='mt-3 text-xs flex justify-between items-center'>
                             <p>Don`t have an account?</p>
-                            <button className='py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300'>Register</button>
+                            <Link to="/registerscreen"><button className='py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300'>Register</button>
+                            </Link>
                         </div>
                     </div>
 

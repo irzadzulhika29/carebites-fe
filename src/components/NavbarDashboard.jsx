@@ -6,7 +6,7 @@ const NavbarDashboard = () => {
             <div className="flex items-center px-5">
                 {/* Kiri */}
                 {/* Logo */}
-                <Link to="/" className="py-1 pr-10 flex gap-2 hover:scale-110 transition duration-300">
+                <Link to="/homepage" className="py-1 pr-10 flex gap-2 hover:scale-110 transition duration-300">
                     <span className="text-2xl font-bold text-[#00712D]">
                         Care<span className="text-[#D5ED9F]">Bites</span>
                     </span>

@@ -5,7 +5,7 @@ const Sidebar = () => {
         <div className="ml-3 flex flex-col gap-5">
             {/* Home Link */}
             <NavLink
-                to="/"
+                to="/homepage"
                 className={({ isActive }) =>
                     `hover:bg-[#00712D] hover:text-white transition duration-300 text-[#00712D] p-2 rounded-md flex items-center gap-3 ${isActive ? 'bg-[#00712D] text-white' : ''}`
                 }
