@@ -14,6 +14,7 @@ const ShareMeals = () => {
   };
 
 
+
   const [jumlahMakanan, setJumlahMakanan] = useState(0);
   const handleIncrease = () => {
     setJumlahMakanan(jumlahMakanan + 1);
@@ -38,12 +39,15 @@ const ShareMeals = () => {
     }
   };
 
+
+
+
   return (
     <div>
-     <NavbarDashboard />
+      <NavbarDashboard />
       <section className="mt-24 flex px-5">
         <Sidebar />
-
+        
         {/* Content */}
         <div className="ml-10 w-full">
           <div>
@@ -152,10 +156,6 @@ const ShareMeals = () => {
           <div className="bg-[#00712D] text-white p-5 rounded-xl">
             <h1 className="mb-5">Informasi Pengambilan Produk</h1>
 
-            <form action="">
-
-
-            </form>
             <div className="w-3/4 mb-4 relative">
               <h1 className="text-xs text-white mb-2">Lokasi Pengambilan</h1>
               <input
@@ -165,7 +165,6 @@ const ShareMeals = () => {
                 placeholder="Lokasi pengambilan produk"
                 className="py-2 w-full text-xs p-1 bg-transparent border border-white rounded-md text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
               />
-
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" className="bi bi-geo-alt-fill absolute top-3/4 right-3 -translate-y-1/2 cursor-pointer" viewBox="0 0 16 16">
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
               </svg>
@@ -174,7 +173,6 @@ const ShareMeals = () => {
             {/* Date */}
             <form action="">
               <div className="flex gap-4 w-3/4">
-
                 {/* Waktu Awal Pengambilan */}
                 <div className="mb-4 relative w-1/2" onClick={handleFocusAwal}>
                   <h1 className="text-xs text-white mb-2">Waktu Awal Pengambilan</h1>
@@ -198,10 +196,8 @@ const ShareMeals = () => {
                     />
                   </div>
                 </div>
-
-
-
               </div>
+
               <button className="transition duration-300 w-3/4 text-xs text-white font-bold py-4 px-4 bg-transparent border rounded-xl hover:bg-white hover:text-[#00712D] hover:scale-104">
                 Upload
               </button>

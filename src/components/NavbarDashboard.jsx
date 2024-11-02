@@ -75,7 +75,7 @@ const NavbarDashboard = () => {
                                     <ul className="flex flex-col gap-3 text-sm text-left">
                                         {/* Item Notifikasi */}
                                         {[...Array(4)].map((_, index) => (
-                                            <li  key={index} className="text-xs text-[#00712D] bg-white rounded-lg p-3 flex justify-between items-center shadow-sm">
+                                            <li key={index} className="text-xs text-[#00712D] bg-white rounded-lg p-3 flex justify-between items-center shadow-sm">
                                                 <span>Artikel anda telah diterima ...</span>
                                                 <div className="text-xs text-gray-400 text-right">
                                                     <div>12 Okt</div>
@@ -122,16 +122,22 @@ const NavbarDashboard = () => {
                                         d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
                                     />
                                 </svg>
+
                                 <div
-                                    className={`transition duration-300 absolute top-3/4 right-1/2 min-w-full w-max bg-white shadow-md mt-1 rounded ${isVisible ? '' : 'hidden'
+                                    className={`transition duration-300 absolute top-3/4 right-1/2 min-w-full w-max bg-gray-100 shadow-md mt-1 rounded-md ${isVisible ? '' : 'hidden'
                                         }`}
                                 >
-                                    <ul className='text-xs text-right border rounded'>
+                                    <ul className='flex gap-2 flex-col text-xs text-right border p-2'>
                                         <Link to="/">
-                                            <li className='hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Logout</li>
+                                            <li className='rounded-md hover:bg-white hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Logout</li>
                                         </Link>
-                                        <li className='hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Edit Profil</li>
-                                        <li className='hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Helps & Support</li>
+                                        <Link to="/profile">
+                                            <li className='rounded-md hover:bg-white hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Edit Profil</li>
+                                        </Link>
+                                        <Link>
+                                            <li className='rounded-md hover:bg-white hover:pointer border-b px-5 py-3 hover:bg-gray-100'>Helps & Support</li>
+
+                                        </Link>
                                     </ul>
                                 </div>
                             </div>

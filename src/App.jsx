@@ -9,6 +9,7 @@ import ShareYourActivity from './pages/ShareYourActivity';
 import BlogArtikel from './pages/BlogArtikel';
 import LandingPage from './pages/LandingPage';
 import RegisterScreen from './pages/RegisterScreen';
+import Profile from './pages/Profile';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/blogarticle" element={<BlogArtikel />} />
         <Route path="/loginscreen" element={<LoginScreen />} />
         <Route path="/registerscreen" element={<RegisterScreen />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
