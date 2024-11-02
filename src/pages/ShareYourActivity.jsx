@@ -1,7 +1,6 @@
 import NavbarDashboard from "../components/NavbarDashboard"
 import Sidebar from "../components/Sidebar"
 
-
 const ShareYourActivity = () => {
   return (
     <div>

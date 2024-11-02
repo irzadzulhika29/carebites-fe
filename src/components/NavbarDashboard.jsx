@@ -9,6 +9,11 @@ const NavbarDashboard = () => {
         setIsVisible((prevState) => !prevState);
     };
 
+    const [isNotificationVisible, setNotificationVisible] = useState(false);
+    const handleNotificationToggle = () => {
+        setNotificationVisible(!isNotificationVisible);
+    };
+
 
     return (
         <nav className="fixed mb-5 top-0 p-3 bg-white shadow-md w-full">
@@ -52,9 +57,40 @@ const NavbarDashboard = () => {
                     {/* Profil dan Notifikasi*/}
                     <div className="flex items-center gap-4">
                         {/* Notification Icon */}
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="gray" className="bi bi-bell" viewBox="0 0 16 16">
-                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
-                        </svg>
+                        <div className='relative'>
+                            <svg
+                                onClick={handleNotificationToggle}
+                                className={`hover:scale-125 bi bi-bell cursor-pointer transition-transform duration-300 `}
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                fill="gray"
+                                viewBox="0 0 16 16"
+                            >
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                            </svg>
+
+                            {isNotificationVisible && (
+                                <div className="transition p-4 duration-300 absolute top-5 right-0 w-80 bg-gray-100 shadow-md mt-1 rounded-lg">
+                                    <ul className="flex flex-col gap-3 text-sm text-left">
+                                        {/* Item Notifikasi */}
+                                        {[...Array(4)].map((_, index) => (
+                                            <li  key={index} className="text-xs text-[#00712D] bg-white rounded-lg p-3 flex justify-between items-center shadow-sm">
+                                                <span>Artikel anda telah diterima ...</span>
+                                                <div className="text-xs text-gray-400 text-right">
+                                                    <div>12 Okt</div>
+                                                    <div>System</div>
+                                                </div>
+                                            </li>
+                                        ))}
+                                        {/* Tombol Lihat Semua */}
+                                        <Link to="/notifications" className="text-center text-gray-500 hover:text-gray-700 mt-2 text-xs">
+                                            Lihat Semua ...
+                                        </Link>
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
 
                         {/* Profile Section */}
                         <div className="flex items-center gap-4">

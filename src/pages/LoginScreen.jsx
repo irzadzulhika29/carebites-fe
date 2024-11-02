@@ -11,7 +11,6 @@ function LoginScreen() {
     };
 
     return (
-
         <div>
             <Navbar />
             <section className=" min-h-screen flex items-center justify-center py-10">

@@ -12,7 +12,7 @@ const GrabMeals = () => {
                 {/* Content */}
                 <div className="ml-10 w-full">
                     <h1 className="mb-5 text-3xl font-bold text-[#00712D]">Grab Meals</h1>
-                    <div className="flex flex-wrap gap-3.5">
+                    <div className="flex flex-wrap gap-7">
 
                         <ProductCard
                             profileImFage="https://example.com/profile1.jpg"
@@ -35,27 +35,9 @@ const GrabMeals = () => {
                             location="Surabaya"
                             imageSrc="https://example.com/product-image2.jpg"
                         />
-                        <ProductCard
-                            profileImage="https://example.com/profile3.jpg"
-                            title="Roti Keju"
-                            description="Deskripsi singkat..."
-                            location="Jakarta"
-                            imageSrc="https://example.com/product-image3.jpg"
-                        />
-                        <ProductCard
-                            profileImage="https://example.com/profile4.jpg"
-                            title="Roti Gandum"
-                            description="Info lengkap..."
-                            location="Bandung"
-                            imageSrc="https://example.com/product-image4.jpg"
-                        />
-                        <ProductCard
-                            profileImage="https://example.com/profile5.jpg"
-                            title="Roti Srikaya"
-                            description="Detail produk..."
-                            location="Bali"
-                            imageSrc="https://example.com/product-image5.jpg"
-                        />
+                     
+                      
+                       
                     </div>
                 </div>
 
