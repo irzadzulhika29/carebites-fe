@@ -8,7 +8,7 @@ import ShareYourActivity from './pages/dashboard/shareactivity/ShareYourActivity
 import ProductDetailPage from './components/dashboard/grabmeals/DetailProduct';
 import HomeLanding from './pages/landing-page/HomeLanding';
 import LoginPage from './pages/landing-page/LoginPage';
-import RegistrationPage from './pages/landing-page/RegistartionPage';
+import RegistrationPage from './pages/landing-page/RegistrationPage';
 import GrandProduct from './pages/dashboard/grabmeals/GrandProduct';
 import CharityCampaignDetail from './components/dashboard/charitycampaign/CharityCampaignDetail';
 import CharityCampaignForm from './pages/dashboard/charitycampaign/CharityCampaignForm';
@@ -22,21 +22,21 @@ import ShareMealsForm from './pages/dashboard/sharemeals/ShareMealsForm'; //
 import EditProfil from './pages/dashboard/EditProfil';
 import UpdateShareMeals from './components/dashboard/sharemeals/UpdateShareMeals';
 
-
+// admin
 import AdminDashboard from './pages/dashboard/admin/AdminDashboard';
 import CampaignVerif from './pages/dashboard/admin/charitycampaign/CampaignVerif';
 import CampaignDetailVerif from './pages/dashboard/admin/charitycampaign/CampaignDetailVerif';
 import BlogArticleVerif from './pages/dashboard/admin/blogartikel/BlogArticleVerif';
 import ArticleVerifDetail from './pages/dashboard/admin/blogartikel/ArticleVerifDetail';
 import AccountDetailVerif from './components/dashboard/admin/AccountDetailVerif';
-import AccountList from './pages/dashboard/admin/AccountList';
+import AccountList from './pages/dashboard/admin/AccountList'
 
 import DashboardMitra from './pages/dashboard/mitra/DashboardMitra';
 import ShareMealsMitra from './pages/dashboard/mitra/ShareMealsMitra';
 import UpdateProductMitra from './pages/dashboard/mitra/UpdateProductMitra';
 import ProfileMitra from './pages/dashboard/mitra/ProfileMitra';
 import EditProfilMitra from './pages/dashboard/mitra/EditProfilMitra';
-import ShareMealsFormMitra from './pages/dashboard/mitra/ShareMealsFormMitra';
+import ShareMealsFormMitra from './pages/dashboard/mitra/ShareMealsFormMitra'
 
 import DashboardLS from './pages/dashboard/lembagasosial/DashboardLS';
 import CharityCampaignLS from './pages/dashboard/lembagasosial/CharityCampaignLS';
@@ -44,9 +44,9 @@ import ProfileLS from './pages/dashboard/lembagasosial/ProfileLS';
 import AccountVerifFormLS from './pages/dashboard/lembagasosial/AccountVerifFormLS';
 import EditProfileLS from './pages/dashboard/lembagasosial/EditProfileLS';
 import UpdateCharityLS from './pages/dashboard/lembagasosial/UpdateCharityLS';
-import CreateCharityLS from './pages/dashboard/lembagasosial/CreateCharityLS';
+import CreateCharityLS from './pages/dashboard/lembagasosial/CreateCharityLS'
 
-import AccountVerifForm from './pages/dashboard/AccountVerifForm';
+import AccountVerifForm from './pages/dashboard/AccountVerifForm'
 
 const App = () => {
   return (
@@ -87,12 +87,14 @@ const App = () => {
           <Route path="/article-detail-verif/:id" element={<ArticleVerifDetail />} />
           <Route path="/account-verif/:id" element={<AccountDetailVerif />} />
 
+
           <Route path="/edit-profil-mitra" element={<EditProfilMitra />} />
           <Route path="/mitra" element={<DashboardMitra />} />
           <Route path="/sharemeals-mitra" element={<ShareMealsMitra />} />
           <Route path="/sharemeals-form-mitra" element={<ShareMealsFormMitra />} />
           <Route path="/profile-mitra" element={<ProfileMitra />} />
           <Route path="/update-product/:id" element={<UpdateProductMitra />} />
+
 
           <Route path="/verif-form-mitra" element={<AccountVerifForm />} />
 

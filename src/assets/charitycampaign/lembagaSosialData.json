@@ -40,6 +40,20 @@
         "campaign_image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjumIUFOir5N_Pkq6Y6zUSJ0hJwOmaBAnbKoU5hp2eXvLbdwzCWGy-JGlBbOwqQM28J4_qNVem6ZZQ4urfS2touq42jim1uhYEVjAUQ_PqNwQjtDTBTRaBKALdrEc6GSjqrq7QYiYRkuzee63EVwccTucdxBtR9LIiHFx6ip7vGBkjXNqFG3oT37LttSmA/s16000/perempuan-tak-mendapat-susu-dari-Wapres-Gibran-Rakabuming-Raka%20(Custom).jpg",
         "start_date": "15-11-2024",
         "end_date": "31-01-2025"
+    },
+    {
+        "id": 4,
+        "location": "Bandung, Indonesia",
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtxRL50ZOnBmXrTN985TVG7_5MPgCyzJLyrQ&s",
+        "campaign_title": "Donasi untuk Ibu",
+        "description": "Mendukung akses kesehatan bagi ibu hamil dan anak-anak di daerah terpencil Bandung. Dana akan digunakan untuk pelayanan kesehatan, penyediaan vitamin, imunisasi, dan konsultasi kesehatan.",
+        "collected": 3000000,
+        "target": 10000000,
+        "category": "Kesehatan",
+        "campaign_image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjumIUFOir5N_Pkq6Y6zUSJ0hJwOmaBAnbKoU5hp2eXvLbdwzCWGy-JGlBbOwqQM28J4_qNVem6ZZQ4urfS2touq42jim1uhYEVjAUQ_PqNwQjtDTBTRaBKALdrEc6GSjqrq7QYiYRkuzee63EVwccTucdxBtR9LIiHFx6ip7vGBkjXNqFG3oT37LttSmA/s16000/perempuan-tak-mendapat-susu-dari-Wapres-Gibran-Rakabuming-Raka%20(Custom).jpg",
+        "start_date": "01-10-2024",
+        "end_date": "12-12-2024",
+        "status": "aktif"
     }
   
 ]

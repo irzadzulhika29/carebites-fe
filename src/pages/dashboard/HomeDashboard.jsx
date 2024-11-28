@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { FiTrendingUp, FiUsers, FiBox, FiBookOpen, FiHeart, FiArrowRight } from "react-icons/fi";
 import Carousel from "../../components/dashboard/home/Carousel";
 import Sidebar from "../../components/dashboard/Sidebar";
 import Navbar from "../../components/dashboard/Navbar";
@@ -90,6 +91,12 @@ const HomeDashboard = () => {
     }
   ];
 
+  const stats = [
+    { id: 1, name: 'Total Donasi', value: 'Rp 12.5M+', icon: FiTrendingUp },
+    { id: 2, name: 'Donatur Aktif', value: '2,500+', icon: FiUsers },
+    { id: 3, name: 'Produk Tersedia', value: '150+', icon: FiBox },
+  ];
+
   return (
     <motion.div
       className="flex min-h-screen"
@@ -106,6 +113,40 @@ const HomeDashboard = () => {
           className="px-10 py-8"
           variants={containerVariants}
         >
+          {/* Welcome Section */}
+          <motion.section
+            className="mb-10 text-center"
+            variants={fadeInVariants}
+          >
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+              Selamat Datang di CareBites! 🌟
+            </h1>
+            <p className="text-gray-600 mb-8">
+              Bersama kita bisa membuat perubahan yang berarti untuk sesama
+            </p>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              {stats.map((stat) => (
+                <motion.div
+                  key={stat.id}
+                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center justify-center space-x-4">
+                    <div className="p-3 bg-green-100 rounded-full">
+                      <stat.icon className="w-6 h-6 text-[#45c517]" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-sm text-gray-600">{stat.name}</p>
+                      <p className="text-2xl font-bold text-gray-800">{stat.value}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+
           {/* Carousel Section */}
           <motion.section
             className="bg-white shadow-lg rounded-2xl p-6 mb-10 hover:shadow-xl transition-shadow duration-300"
@@ -123,16 +164,19 @@ const HomeDashboard = () => {
               className="flex justify-between items-center mb-5"
               variants={itemVariants}
             >
-              <h2 className="text-2xl font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-[#45c517]">
-                Temukan Produk Terbaik
-              </h2>
+              <div className="flex items-center space-x-3">
+                <FiBox className="w-6 h-6 text-[#45c517]" />
+                <h2 className="text-2xl font-semibold text-gray-800">
+                  Temukan Produk Terbaik
+                </h2>
+              </div>
               <motion.a
                 href="/products"
-                className="text-primary-600 hover:text-primary-800 transition-all duration-300 hover:scale-105"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="flex items-center space-x-2 text-[#45c517] hover:text-[#3ba513] transition-all duration-300"
+                whileHover={{ x: 5 }}
               >
-                View All
+                <span>Lihat Semua</span>
+                <FiArrowRight />
               </motion.a>
             </motion.div>
 
@@ -185,24 +229,27 @@ const HomeDashboard = () => {
               className="flex justify-between items-center mb-5"
               variants={itemVariants}
             >
-              <h2 className="text-2xl font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-[#45c517]">
-                Mari Berkontribusi!
-              </h2>
+              <div className="flex items-center space-x-3">
+                <FiHeart className="w-6 h-6 text-[#45c517]" />
+                <h2 className="text-2xl font-semibold text-gray-800">
+                  Mari Berkontribusi!
+                </h2>
+              </div>
               <motion.a
                 href="/charity"
-                className="text-primary-600 hover:text-primary-800 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="flex items-center space-x-2 text-[#45c517] hover:text-[#3ba513] transition-all duration-300"
+                whileHover={{ x: 5 }}
               >
-                View All
+                <span>Lihat Semua</span>
+                <FiArrowRight />
               </motion.a>
             </motion.div>
 
             <motion.div
-              className="flex justify-between gap-8"
+              className="flex flex-wrap gap-5"
               variants={containerVariants}
             >
-              {charityData.slice(0, 4).map((lembaga) => (
+              {charityData.slice(0, 5).map((lembaga) => (
                 <motion.div
                   key={lembaga.id}
                   variants={itemVariants}
@@ -228,15 +275,32 @@ const HomeDashboard = () => {
             </motion.div>
           </motion.section>
 
+          {/* Article Section */}
+          <motion.section
+            className="mb-10"
+            variants={containerVariants}
+          >
+            <motion.div
+              className="flex justify-between items-center mb-5"
+              variants={itemVariants}
+            >
+              <div className="flex items-center space-x-3">
+                <FiBookOpen className="w-6 h-6 text-[#45c517]" />
+                <h2 className="text-2xl font-semibold text-gray-800">
+                  Baca Artikel Terbaru
+                </h2>
+              </div>
+              <motion.a
+                href="/articles"
+                className="flex items-center space-x-2 text-[#45c517] hover:text-[#3ba513] transition-all duration-300"
+                whileHover={{ x: 5 }}
+              >
+                <span>Lihat Semua</span>
+                <FiArrowRight />
+              </motion.a>
+            </motion.div>
 
-          <section className="">
-            <h2 className="mb-5 text-2xl font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-[#45c517]">
-              Baca Artikel Terbaru
-            </h2>
-
-            <div className="flex flex-wrap justify-start gap-7">
-
-
+            <div className="flex flex-wrap  gap-8">
               {articleData.map((article) => (
                 <motion.div
                   key={article.id}
@@ -245,6 +309,7 @@ const HomeDashboard = () => {
                     scale: 1.03,
                     transition: { duration: 0.2 },
                   }}
+                  className=""
                 >
                   <Link to={`/article/${article.id}`}>
                     <ArticleCard article={article} />
@@ -252,8 +317,7 @@ const HomeDashboard = () => {
                 </motion.div>
               ))}
             </div>
-
-          </section>
+          </motion.section>
         </motion.div>
       </main>
     </motion.div>
