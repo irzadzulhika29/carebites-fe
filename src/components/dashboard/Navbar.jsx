@@ -87,7 +87,7 @@ const Navbar = ({ showSearchBar }) => {
           <div className='flex items-center gap-3'>
             <div>
               <h1>{userData.user.name}</h1>
-              <h1 className="text-xs">{userData.user.location}</h1>
+              <h1 className="text-xs">{userData.user.kota}</h1>
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

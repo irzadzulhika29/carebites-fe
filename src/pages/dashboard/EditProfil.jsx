@@ -38,7 +38,7 @@ const EditProfil = () => {
                     <Navbar />
 
                     <section className="min-h-screen mx-10 mt-5 mb-5 ">
-                     
+
                         <h1 className=" text-2xl font-bold text-[#45c517]">
                             Edit Profil
                         </h1>
@@ -114,19 +114,18 @@ const EditProfil = () => {
                                         </svg>
                                     </div>
                                 </div>
-
                                 <div className="flex flex-col gap-3 py-3 border-t border-b border-gray-200">
                                     <label
                                         className="text-sm font-semibold text-gray-700"
-                                        htmlFor="username"
+                                        htmlFor="city"
                                     >
-                                        Email
+                                        Kota
                                     </label>
                                     <div className="relative">
                                         <input
-                                            value={userData.user.email}
-                                            id="username"
-                                            name="username"
+                                            value={userData.user.city}
+                                            id="city"
+                                            name="city"
                                             type="text"
                                             className="w-full px-4 py-1 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                                         />
@@ -146,82 +145,115 @@ const EditProfil = () => {
                                         </svg>
                                     </div>
                                 </div>
+                           
 
-                                <div className="flex flex-col gap-3 py-3 border-t border-b border-gray-200">
-                                    <label
-                                        className="text-sm font-semibold text-gray-700"
-                                        htmlFor="username"
+                            <div className="flex flex-col gap-3 py-3 border-t border-b border-gray-200">
+                                <label
+                                    className="text-sm font-semibold text-gray-700"
+                                    htmlFor="username"
+                                >
+                                    Email
+                                </label>
+                                <div className="relative">
+                                    <input
+                                        value={userData.user.email}
+                                        id="username"
+                                        name="username"
+                                        type="text"
+                                        className="w-full px-4 py-1 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                    />
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
                                     >
-                                        Nomor Telepon
-                                    </label>
-                                    <div className="relative">
-                                        <input
-                                            value={userData.user.phone_number}
-                                            id="username"
-                                            name="username"
-                                            type="text"
-                                            className="w-full px-4 py-1 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
                                         />
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                                            />
-                                        </svg>
-                                    </div>
+                                    </svg>
                                 </div>
+                            </div>
 
-                                <div className="flex flex-col gap-3 py-3 border-t border-b border-gray-200">
-                                    <label
-                                        className="text-sm font-semibold text-gray-700"
-                                        htmlFor="username"
+                            <div className="flex flex-col gap-3 py-3 border-t border-b border-gray-200">
+                                <label
+                                    className="text-sm font-semibold text-gray-700"
+                                    htmlFor="username"
+                                >
+                                    Nomor Telepon
+                                </label>
+                                <div className="relative">
+                                    <input
+                                        value={userData.user.phone_number}
+                                        id="username"
+                                        name="username"
+                                        type="text"
+                                        className="w-full px-4 py-1 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                    />
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
                                     >
-                                        Password
-                                    </label>
-                                    <div className="relative">
-                                        <input
-                                            value={userData.user.password}
-                                            id="username"
-                                            name="username"
-                                            type="text"
-                                            className="w-full px-4 py-1 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
                                         />
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                                            />
-                                        </svg>
-                                    </div>
+                                    </svg>
                                 </div>
+                            </div>
 
-                                <button className="mt-5 bg-[#45c517] px-3 py-1 rounded-full text-white">Simpan Perubahan</button>
-                            </form>
+                            <div className="flex flex-col gap-3 py-3 border-t border-b border-gray-200">
+                                <label
+                                    className="text-sm font-semibold text-gray-700"
+                                    htmlFor="username"
+                                >
+                                    Password
+                                </label>
+                                <div className="relative">
+                                    <input
+                                        value={userData.user.password}
+                                        id="username"
+                                        name="username"
+                                        type="text"
+                                        className="w-full px-4 py-1 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                    />
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
 
+                            <button className="mt-5 bg-[#45c517] px-3 py-1 rounded-full text-white">Simpan Perubahan</button>
+                        </form>
 
-                        </section>
 
                     </section>
-                </div>
-            </section>
 
+            </section>
         </div>
+            </section >
+
+        </div >
     )
 }
 
